@@ -70,10 +70,10 @@ export default function HomeSection() {
                   priority
                 />
                 
-                <div className="absolute bottom-4 -left-4">
+                <div className="absolute top-4 -right-4">
                     <div className="p-4 bg-background/50 backdrop-blur-sm rounded-xl flex items-center gap-3 border shadow-lg">
                         <p className="text-4xl font-bold text-primary">14+</p>
-                        <p className="text-sm text-foreground/80 leading-tight">Years of<br/>Experience</p>
+                        <p className="text-sm text-foreground/80 leading-tight">Years</p>
                     </div>
                 </div>
 
