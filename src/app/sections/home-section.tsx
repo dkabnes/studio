@@ -20,9 +20,9 @@ export default function HomeSection() {
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-                Denial Abnes
+                Hello, I&apos;m Denial Abnes
                 </h1>
-                <p className="text-2xl md:text-3xl font-medium text-primary-foreground/80">
+                <p className="text-2xl md:text-3xl font-medium text-accent">
                 Expert in Hospitality Leadership & Management
                 </p>
                 <p className="max-w-[600px] text-primary-foreground/70 md:text-xl">
