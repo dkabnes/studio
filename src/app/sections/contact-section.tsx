@@ -41,8 +41,8 @@ export default function ContactSection() {
                 rel="noopener noreferrer" 
                 className="flex items-center gap-4 group"
               >
-                <detail.icon className="h-6 w-6 text-accent" />
-                <span className="text-lg text-foreground group-hover:text-accent transition-colors">{detail.value}</span>
+                <detail.icon className="h-6 w-6 text-primary" />
+                <span className="text-lg text-foreground group-hover:text-primary transition-colors">{detail.value}</span>
               </a>
             ))}
           </div>

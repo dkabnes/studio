@@ -14,17 +14,17 @@ const Footer = () => {
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="icon" asChild>
             <a href="https://www.linkedin.com/in/denialabnes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5 text-accent" />
+              <Linkedin className="h-5 w-5 text-primary" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
             <a href="mailto:denial.abnes@example.com" aria-label="Email">
-              <Mail className="h-5 w-5 text-accent" />
+              <Mail className="h-5 w-5 text-primary" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
             <a href="tel:+15551234567" aria-label="Phone">
-              <Phone className="h-5 w-5 text-accent" />
+              <Phone className="h-5 w-5 text-primary" />
             </a>
           </Button>
         </div>

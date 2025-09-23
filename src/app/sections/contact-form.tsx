@@ -63,10 +63,10 @@ export function ContactForm() {
   };
 
   return (
-    <Card>
+    <Card className="bg-secondary">
       <CardHeader>
         <CardTitle>Send a Message</CardTitle>
-        <CardDescription>Fill out the form below and I&apos;ll get back to you as soon as possible.</CardDescription>
+        <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>

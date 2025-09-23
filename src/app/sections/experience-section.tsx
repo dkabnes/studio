@@ -97,7 +97,7 @@ export default function ExperienceSection() {
             <AccordionItem value={`item-${index}`} key={index}>
               <AccordionTrigger>
                 <div className="flex items-center gap-4 text-left">
-                  <Briefcase className="h-8 w-8 text-accent flex-shrink-0" />
+                  <Briefcase className="h-8 w-8 text-primary flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-primary">{exp.role}</h3>
                     <p className="text-sm text-muted-foreground">
