@@ -30,7 +30,7 @@ export default function ContactSection() {
       <div className="grid md:grid-cols-2 gap-12">
         <div className="space-y-6">
           <p className="text-lg text-muted-foreground">
-            I&apos;m always open to discussing new opportunities, creative ideas, or ways to collaborate. Feel free to reach out.
+            I'm always open to discussing new opportunities, creative ideas, or ways to collaborate. Feel free to reach out.
           </p>
           <div className="space-y-4">
             {contactDetails.map((detail) => (

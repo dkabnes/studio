@@ -24,7 +24,7 @@ export default function HomeSection() {
                 Kuwait • UAE • Canada • India
             </Badge>
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground font-headline">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
                 Hello, I&apos;m <span className="text-accent">Denial Abnes</span>
               </h1>
               <p className="text-2xl md:text-3xl font-medium text-foreground/80">
@@ -35,7 +35,7 @@ export default function HomeSection() {
               </p>
             </div>
             
-            <div className="flex flex-col gap-3 sm:flex-row sm:justify-start pt-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start pt-4">
               <Button asChild size="lg">
                 <Link href="#about">
                   Discover My Story <ArrowRight className="ml-2 h-5 w-5" />

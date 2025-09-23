@@ -28,7 +28,7 @@ const SectionTitle = ({
   <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
     <div className="space-y-2">
       <h2 className={cn(
-        "text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary",
+        "text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary",
         className
       )}>
         {children}
