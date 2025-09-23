@@ -59,16 +59,7 @@ export default function HomeSection() {
             {profileImage && (
               <div className="relative w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
-                <div className="absolute top-0 right-0 -translate-y-4 translate-x-4">
-                    <div className="relative w-28 h-28 flex items-center justify-center">
-                        <div className="absolute inset-0 bg-background/50 backdrop-blur-sm rounded-full animate-pulse"></div>
-                        <div className="relative text-center">
-                            <p className="text-3xl font-bold text-primary">14+</p>
-                            <p className="text-sm text-foreground/80">Years</p>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <Image
                   src={profileImage.imageUrl}
                   alt={profileImage.description}
@@ -78,6 +69,14 @@ export default function HomeSection() {
                   className="relative object-cover rounded-full border-8 border-background shadow-2xl w-full h-full"
                   priority
                 />
+                
+                <div className="absolute bottom-4 -left-4">
+                    <div className="p-4 bg-background/50 backdrop-blur-sm rounded-xl flex items-center gap-3 border shadow-lg">
+                        <p className="text-4xl font-bold text-primary">14+</p>
+                        <p className="text-sm text-foreground/80 leading-tight">Years of<br/>Experience</p>
+                    </div>
+                </div>
+
                  <div className="absolute bottom-4 right-0 translate-x-4">
                     <div className="px-4 py-2 bg-background/50 backdrop-blur-sm rounded-full flex items-center gap-3 border">
                         <span className="relative flex h-3 w-3">
