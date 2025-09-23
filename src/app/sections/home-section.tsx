@@ -8,16 +8,30 @@ const stats = [
     { icon: Briefcase, value: "14+ Years", label: "Experience" },
     { icon: Award, value: "Top Performer", label: "Solo Management" },
     { icon: MapPin, value: "4 Countries", label: "Worked In" },
-]
+];
 
 export default function HomeSection() {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
 
   return (
-    <section id="home" className="relative w-full overflow-hidden bg-primary text-primary-foreground pt-24 pb-16 md:pt-32 md:pb-24">
-      <div className="container px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col justify-center space-y-6">
+    <section id="home" className="relative w-full overflow-hidden bg-primary text-primary-foreground py-24 sm:py-32">
+        <div className="absolute inset-0 bg-grid-pattern bg-repeat opacity-20"></div>
+      <div className="container px-4 md:px-6 z-10 relative">
+        <div className="flex flex-col items-center space-y-8 text-center">
+            {profileImage && (
+              <div className="relative w-40 h-40">
+                <div className="absolute inset-0 bg-gradient-to-tr from-accent/50 to-primary/50 rounded-full blur-2xl"></div>
+                <Image
+                  src={profileImage.imageUrl}
+                  alt={profileImage.description}
+                  data-ai-hint={profileImage.imageHint}
+                  width={160}
+                  height={160}
+                  className="relative object-cover rounded-full border-4 border-background/20 shadow-xl w-full h-full"
+                  priority
+                />
+              </div>
+            )}
             <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
                 Hello, I&apos;m Denial Abnes
@@ -25,7 +39,7 @@ export default function HomeSection() {
                 <p className="text-2xl md:text-3xl font-medium text-accent">
                 Expert in Hospitality Leadership & Management
                 </p>
-                <p className="max-w-[600px] text-primary-foreground/70 md:text-xl">
+                <p className="max-w-3xl mx-auto text-primary-foreground/80 md:text-xl">
                 A seasoned professional driving excellence in restaurant and hotel operations through strategic leadership, financial acumen, and a deep commitment to guest satisfaction.
                 </p>
             </div>
@@ -39,38 +53,21 @@ export default function HomeSection() {
                 <Link href="#contact">Contact Me</Link>
               </Button>
             </div>
-            <div className="mt-8 pt-6 border-t border-primary-foreground/30">
-                <div className="grid grid-cols-3 gap-4">
+            <div className="w-full max-w-4xl pt-8 mt-8 border-t border-primary-foreground/30">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                     {stats.map((stat, index) => (
-                        <div key={index} className="flex items-center gap-3">
-                            <div className="p-2 bg-primary-foreground/10 rounded-full">
-                                <stat.icon className="h-6 w-6 text-primary-foreground" />
+                        <div key={index} className="flex items-center justify-center gap-4">
+                            <div className="p-3 bg-primary-foreground/10 rounded-full">
+                                <stat.icon className="h-7 w-7 text-primary-foreground" />
                             </div>
-                            <div>
-                                <p className="text-lg font-bold">{stat.value}</p>
-
+                            <div className="text-left">
+                                <p className="text-2xl font-bold">{stat.value}</p>
+                                <p className="text-sm text-primary-foreground/70">{stat.label}</p>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-          </div>
-          <div className="relative flex items-center justify-center -order-1 lg:order-1">
-            {profileImage && (
-              <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
-                <div className="absolute inset-0 bg-gradient-to-tr from-accent/50 to-primary/50 rounded-full blur-3xl"></div>
-                <Image
-                  src={profileImage.imageUrl}
-                  alt={profileImage.description}
-                  data-ai-hint={profileImage.imageHint}
-                  width={500}
-                  height={500}
-                  className="relative object-cover rounded-full border-8 border-background/20 shadow-2xl w-full h-full"
-                  priority
-                />
-              </div>
-            )}
-          </div>
         </div>
       </div>
     </section>
