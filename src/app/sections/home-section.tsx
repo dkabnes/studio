@@ -57,7 +57,7 @@ export default function HomeSection() {
           </div>
           <div className="relative flex justify-center items-center">
             {profileImage && (
-              <div className="relative w-80 h-80 md:w-96 md:h-96">
+              <div className="relative w-80 h-80 md:w-96 md:h-96 overflow-hidden rounded-full">
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
                 
                 <Image
@@ -66,7 +66,7 @@ export default function HomeSection() {
                   data-ai-hint={profileImage.imageHint}
                   width={400}
                   height={400}
-                  className="relative object-cover object-top rounded-full border-8 border-background shadow-2xl w-full h-full"
+                  className="relative object-cover object-top rounded-full border-8 border-background shadow-2xl w-full h-full scale-110"
                   priority
                 />
                 
