@@ -66,13 +66,13 @@ export default function HomeSection() {
                   data-ai-hint={profileImage.imageHint}
                   width={400}
                   height={400}
-                  className="relative object-cover object-center rounded-full border-8 border-background shadow-2xl w-full h-full"
+                  className="relative object-cover object-top rounded-full border-8 border-background shadow-2xl w-full h-full"
                   priority
                 />
                 
                 <div className="absolute top-2 -right-2">
                     <div className="p-2 bg-background/50 backdrop-blur-sm rounded-xl flex items-center gap-2 border shadow-lg">
-                        <p className="text-2xl font-bold text-primary">14+</p>
+                        <p className="text-xl font-bold text-primary">14+</p>
                         <p className="text-xs text-foreground/80 leading-tight">Years</p>
                     </div>
                 </div>
