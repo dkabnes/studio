@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, Download, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const stats = [
@@ -46,12 +46,14 @@ export default function HomeSection() {
             
             <div className="flex flex-col gap-3 sm:flex-row pt-4">
               <Button asChild size="lg">
-                <Link href="#about">
-                  Discover My Story <ArrowRight className="ml-2 h-5 w-5" />
+                <Link href="#contact">
+                  Contact Me
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="#contact">Contact Me</Link>
+                <a href="/Denial_Abnes_CV.pdf" download>
+                  Download CV <Download className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
@@ -67,7 +69,7 @@ export default function HomeSection() {
                       data-ai-hint={profileImage.imageHint}
                       width={400}
                       height={400}
-                      className="relative object-cover object-[-8px_-2px] w-full h-full scale-110"
+                      className="relative object-cover object-[-8px_-2px] w-full h-full scale-105"
                       priority
                     />
                 </div>
@@ -79,7 +81,7 @@ export default function HomeSection() {
                     </div>
                 </div>
 
-                 <div className="absolute bottom-4 -right-4">
+                 <div className="absolute bottom-4 -left-12">
                     <div className="px-4 py-2 bg-background/50 backdrop-blur-sm rounded-full flex items-center gap-3 border">
                         <span className="relative flex h-3 w-3">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
