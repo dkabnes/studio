@@ -9,6 +9,18 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
     {
+        role: "Food Service Supervisor/Manager",
+        company: "Chuck’s Road House",
+        location: "Sault, Canada",
+        period: "2024 – 2025",
+        details: [
+            "Supervise and coordinate activities of food service staff.",
+            "Ensure compliance with health and safety regulations.",
+            "Maintain high standards of food quality and presentation.",
+            "Train new employees and provide ongoing training for existing staff."
+        ],
+    },
+    {
         role: "Restaurant Manager",
         company: "Solo Management Co.",
         location: "Mirqab, Kuwait",
