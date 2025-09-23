@@ -2,41 +2,46 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, MapPin, Briefcase, Award } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const stats = [
-    { icon: Briefcase, value: "14+ Years", label: "Experience" },
-    { icon: Award, value: "Top Performer", label: "Solo Management" },
-    { icon: MapPin, value: "4 Countries", label: "Worked In" },
+    { value: "14+", label: "Years Experience" },
+    { value: "4", label: "Countries" },
+    { value: "50+", label: "Projects Led" },
 ];
 
 export default function HomeSection() {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
 
   return (
-    <section id="home" className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-background -z-10" />
-      <div className="container px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] py-20 md:py-28">
+    <section id="home" className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-primary/20 via-background to-background">
+      <div className="container px-4 md:px-6 relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen pt-28 pb-16">
           <div className="space-y-6 text-center md:text-left">
+            <Badge variant="secondary" className="gap-2 pl-2 pr-3 py-1 text-sm">
+                <MapPin className="h-4 w-4" />
+                Kuwait • UAE • Canada • India
+            </Badge>
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground font-headline">
-                Hello, I&apos;m Denial Abnes
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground font-headline">
+                Hello, I&apos;m <span className="text-accent">Denial Abnes</span>
               </h1>
-              <p className="text-2xl md:text-3xl font-medium text-accent">
-                Expert in Hospitality Leadership & Management
+              <p className="text-2xl md:text-3xl font-medium text-foreground/80">
+                Hospitality Professional
               </p>
-              <p className="max-w-2xl text-primary-foreground/80 md:text-xl">
-                A seasoned professional driving excellence in restaurant and hotel operations through strategic leadership, financial acumen, and a deep commitment to guest satisfaction.
+              <p className="max-w-xl text-foreground/60 md:text-lg">
+                14+ years of excellence in restaurant and hotel management across international markets. Transforming hospitality experiences through strategic leadership and operational innovation.
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-start">
-              <Button asChild size="lg" variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="#projects">
-                  View Portfolio <ArrowRight className="ml-2 h-5 w-5" />
+            
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-start pt-4">
+              <Button asChild size="lg">
+                <Link href="#about">
+                  Discover My Story <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+              <Button asChild variant="outline" size="lg">
                 <Link href="#contact">Contact Me</Link>
               </Button>
             </div>
@@ -44,7 +49,17 @@ export default function HomeSection() {
           <div className="relative flex justify-center items-center">
             {profileImage && (
               <div className="relative w-80 h-80 md:w-96 md:h-96">
-                <div className="absolute inset-0 bg-gradient-to-tr from-accent to-primary rounded-full blur-3xl opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-accent/50 to-primary/50 rounded-full blur-3xl opacity-50"></div>
+                <div className="absolute top-0 right-0 -translate-y-4 translate-x-4">
+                    <div className="relative w-28 h-28 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-background/50 backdrop-blur-sm rounded-full animate-pulse"></div>
+                        <div className="relative text-center">
+                            <p className="text-3xl font-bold text-accent">14+</p>
+                            <p className="text-sm text-foreground/80">Years</p>
+                        </div>
+                    </div>
+                </div>
+
                 <Image
                   src={profileImage.imageUrl}
                   alt={profileImage.description}
@@ -54,25 +69,31 @@ export default function HomeSection() {
                   className="relative object-cover rounded-full border-8 border-background/20 shadow-2xl w-full h-full"
                   priority
                 />
+                 <div className="absolute bottom-4 right-0 translate-x-4">
+                    <div className="px-4 py-2 bg-background/50 backdrop-blur-sm rounded-full flex items-center gap-3">
+                        <span className="relative flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                        <div>
+                            <p className="font-semibold text-sm">Available for Projects</p>
+                            <p className="text-xs text-foreground/60">Remote & On-site</p>
+                        </div>
+                    </div>
+                 </div>
               </div>
             )}
           </div>
         </div>
-        <div className="pb-16">
-            <div className="w-full max-w-5xl mx-auto p-8 bg-background/10 backdrop-blur-sm rounded-2xl border border-primary-foreground/20">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-primary-foreground">
-                    {stats.map((stat, index) => (
-                        <div key={index} className="flex items-center justify-center gap-4">
-                            <div className="p-3 bg-primary-foreground/10 rounded-full">
-                                <stat.icon className="h-7 w-7 text-accent" />
-                            </div>
-                            <div className="text-left">
-                                <p className="text-2xl font-bold">{stat.value}</p>
-                                <p className="text-sm text-primary-foreground/70">{stat.label}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+        
+        <div className="pb-24">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-foreground text-center">
+                {stats.map((stat, index) => (
+                    <div key={index}>
+                        <p className="text-5xl font-bold text-accent">{stat.value}</p>
+                        <p className="text-lg text-foreground/70">{stat.label}</p>
+                    </div>
+                ))}
             </div>
         </div>
       </div>
