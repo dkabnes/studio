@@ -57,18 +57,20 @@ export default function HomeSection() {
           </div>
           <div className="relative flex justify-center items-center">
             {profileImage && (
-              <div className="relative w-80 h-80 md:w-96 md:h-96 overflow-hidden rounded-full">
+              <div className="relative w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
                 
-                <Image
-                  src={profileImage.imageUrl}
-                  alt={profileImage.description}
-                  data-ai-hint={profileImage.imageHint}
-                  width={400}
-                  height={400}
-                  className="relative object-cover object-[-8px_top] rounded-full border-8 border-background shadow-2xl w-full h-full scale-125"
-                  priority
-                />
+                <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-background shadow-2xl">
+                    <Image
+                      src={profileImage.imageUrl}
+                      alt={profileImage.description}
+                      data-ai-hint={profileImage.imageHint}
+                      width={400}
+                      height={400}
+                      className="relative object-cover object-[-8px_top] w-full h-full scale-125"
+                      priority
+                    />
+                </div>
                 
                 <div className="absolute top-2 -right-2">
                     <div className="p-2 bg-background/50 backdrop-blur-sm rounded-xl flex items-center gap-2 border shadow-lg">
@@ -77,7 +79,7 @@ export default function HomeSection() {
                     </div>
                 </div>
 
-                 <div className="absolute bottom-4 right-0 translate-x-4">
+                 <div className="absolute bottom-4 -right-4">
                     <div className="px-4 py-2 bg-background/50 backdrop-blur-sm rounded-full flex items-center gap-3 border">
                         <span className="relative flex h-3 w-3">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
