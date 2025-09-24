@@ -3,7 +3,7 @@ import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
-import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb } from "lucide-react";
+import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb, DollarSign, User } from "lucide-react";
 
 type Project = {
   title: string;
@@ -57,13 +57,22 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "Operational Leadership at Abu Hasaniya",
+    title: "Abu Hasaniya Restaurant Turnaround",
     company: "Solo Management Co.",
-    description: "Took charge of a newly opened restaurant, implementing strategic initiatives that dramatically improved operational efficiency and drove significant sales growth from the ground up.",
+    description: "Led operational improvements for a newly opened restaurant, implementing strategic changes to boost sales and operational efficiency.",
     image: PlaceHolderImages.find(p => p.id === 'project-abu-hasaniya'),
-    achievements: [],
-    skills: [],
-    metrics: []
+    achievements: [
+      "Redesigned operational workflows and staff scheduling.",
+      "Implemented new menu engineering and pricing strategies.",
+      "Launched targeted marketing and customer retention programs.",
+      "Established quality control systems and staff training protocols."
+    ],
+    skills: ["Operations Optimization", "Menu Engineering", "Marketing Strategy", "Quality Management", "Financial Analysis"],
+    metrics: [
+        { icon: TrendingUp, value: "65%", label: "Sales Increase" },
+        { icon: DollarSign, value: "25%", label: "Cost Reduction" },
+        { icon: Users, value: "+40%", label: "Staff Efficiency" },
+    ]
   },
   {
     title: "Sustained Sales Excellence at Pizzabar",
@@ -141,6 +150,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
 export default function ProjectsSection() {
     const royalGoansProject = projects[0];
     const covidProject = projects[1];
+    const abuHasaniyaProject = projects[2];
 
   return (
     <Section id="projects">
@@ -149,6 +159,7 @@ export default function ProjectsSection() {
       <div className="space-y-12">
         <ProjectCard project={royalGoansProject} />
         <ProjectCard project={covidProject} />
+        <ProjectCard project={abuHasaniyaProject} />
       </div>
     </Section>
   );
