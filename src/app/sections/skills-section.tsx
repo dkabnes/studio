@@ -1,3 +1,4 @@
+
 import { Section } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -140,10 +141,10 @@ export default function SkillsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {specializations.map((spec, index) => (
-            <Card key={index} className="bg-secondary/50 p-6 shadow-sm hover:shadow-lg transition-shadow group">
+            <Card key={index} className="bg-card p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
                 <div className="relative flex flex-col items-center text-center">
-                    <div className="relative mb-4">
-                        <div className="p-5 inline-block bg-background rounded-2xl shadow-inner-lg group-hover:bg-white transition-colors">
+                    <div className="relative mb-6">
+                        <div className="p-5 inline-block bg-secondary rounded-2xl shadow-inner-sm group-hover:bg-primary/10 transition-colors duration-300">
                             <spec.icon className="h-10 w-10 text-primary" />
                         </div>
                         <div className="absolute -top-2 -right-2 w-7 h-7 bg-primary/80 text-white backdrop-blur-sm rounded-full flex items-center justify-center text-xs font-bold border-2 border-background">
@@ -151,9 +152,9 @@ export default function SkillsSection() {
                         </div>
                     </div>
                     <h4 className="text-xl font-semibold mb-4 text-foreground">{spec.title}</h4>
-                    <div className="flex flex-wrap justify-center gap-2">
+                    <div className="flex flex-col items-center justify-center gap-2 w-full">
                         {spec.skills.map(skill => (
-                            <Badge key={skill} variant="outline" className="bg-background group-hover:bg-white transition-colors">{skill}</Badge>
+                            <Badge key={skill} variant="outline" className="w-full justify-center py-2 bg-secondary group-hover:bg-background transition-colors">{skill}</Badge>
                         ))}
                     </div>
                 </div>
