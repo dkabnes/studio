@@ -177,7 +177,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
 export default function ProjectsSection() {
   return (
     <Section id="projects">
-      <SectionTitle>Notable Projects</SectionTitle>
+      <SectionTitle className="text-foreground">Notable Projects</SectionTitle>
       
       <div className="space-y-12">
         {projects.map((project, index) => (
