@@ -65,16 +65,18 @@ export default function HomeSection() {
               <div className="relative w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl"></div>
                 
-                <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-primary shadow-2xl">
-                    <Image
-                      src={profileImage.imageUrl}
-                      alt={profileImage.description}
-                      data-ai-hint={profileImage.imageHint}
-                      width={400}
-                      height={400}
-                      className="relative object-cover object-[-8px_-2px] w-full h-full scale-105"
-                      priority
-                    />
+                <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-br from-yellow-300 via-accent to-yellow-600 shadow-2xl">
+                    <div className="w-full h-full rounded-full overflow-hidden border-4 border-primary">
+                        <Image
+                            src={profileImage.imageUrl}
+                            alt={profileImage.description}
+                            data-ai-hint={profileImage.imageHint}
+                            width={400}
+                            height={400}
+                            className="relative object-cover object-[-8px_-2px] w-full h-full scale-105"
+                            priority
+                        />
+                    </div>
                 </div>
                 
                 <div className="absolute top-2 -right-2">
