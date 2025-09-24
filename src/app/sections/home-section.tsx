@@ -18,8 +18,8 @@ export default function HomeSection() {
 
   return (
     <section id="home" className="relative w-full overflow-hidden bg-primary text-primary-foreground">
-      <div className="absolute top-0 -left-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse-slow"></div>
-      <div className="absolute bottom-0 -right-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse-slow animation-delay-4000"></div>
+      <div className="absolute top-0 -left-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full mix-blend-lighten filter blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-0 -right-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full mix-blend-lighten filter blur-3xl animate-pulse-slow animation-delay-4000"></div>
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen pt-28 pb-16">
