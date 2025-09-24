@@ -105,7 +105,7 @@ export default function HomeSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-primary-foreground text-center">
                 {stats.map((stat, index) => (
                     <div key={index}>
-                        <p className="text-5xl font-bold text-white">{stat.value}</p>
+                        <p className="text-5xl font-bold text-yellow-300">{stat.value}</p>
                         <p className="text-lg text-primary-foreground/70">{stat.label}</p>
                     </div>
                 ))}
