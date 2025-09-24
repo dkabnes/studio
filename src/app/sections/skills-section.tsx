@@ -1,4 +1,4 @@
-import { Section, SectionTitle } from "@/components/section";
+import { Section } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Utensils, Shield, Globe, BookOpen, UtensilsCrossed, LineChart, Users, Heart, GraduationCap, Target } from "lucide-react";
@@ -105,29 +105,29 @@ export default function SkillsSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
             {coreCompetencies.map((skill, index) => (
-            <Card key={index} className="border-l-4 border-primary overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                    <div className="flex items-start gap-6">
+            <Card key={index} className="overflow-hidden shadow-sm hover:shadow-lg transition-shadow bg-card border-l-4 border-primary">
+                <CardContent className="p-8">
+                    <div className="flex items-start gap-6 mb-6">
                         <div className="relative">
                             <div className="p-4 bg-primary/10 rounded-xl">
                                 <skill.icon className="h-8 w-8 text-primary" />
                             </div>
-                            <div className="absolute -top-2 -right-2 w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold">
+                            <div className="absolute -top-2 -right-2 w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold border-2 border-background">
                                 {skill.proficiency}
                             </div>
                         </div>
                         <div className="flex-1">
-                            <h3 className="text-xl font-semibold mb-1">{skill.name}</h3>
+                            <h3 className="text-xl font-semibold mb-1 text-foreground">{skill.name}</h3>
                             <p className="text-sm text-muted-foreground">{skill.description}</p>
                         </div>
                     </div>
-                    <div className="mt-6">
-                        <div className="flex justify-between items-center mb-1">
+                    <div>
+                        <div className="flex justify-between items-center mb-2">
                             <span className="text-sm font-medium text-muted-foreground">Proficiency Level</span>
                             <span className="text-sm font-bold text-primary">{skill.proficiency}%</span>
                         </div>
-                        <Progress value={skill.proficiency} className="h-2 [&>div]:bg-gradient-to-r [&>div]:from-primary/50 [&>div]:to-primary" />
-                         <div className="flex justify-between items-center mt-1">
+                        <Progress value={skill.proficiency} className="h-2 [&>div]:bg-gradient-to-r [&>div]:from-primary/50 [&>div]:to-accent" />
+                         <div className="flex justify-between items-center mt-1.5">
                             <span className="text-xs text-muted-foreground">Beginner</span>
                             <span className="text-xs text-muted-foreground">Expert</span>
                         </div>
