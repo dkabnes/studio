@@ -151,6 +151,7 @@ export default function ProjectsSection() {
     const royalGoansProject = projects[0];
     const covidProject = projects[1];
     const abuHasaniyaProject = projects[2];
+    const pizzabarProject = projects[3];
 
   return (
     <Section id="projects">
@@ -160,6 +161,7 @@ export default function ProjectsSection() {
         <ProjectCard project={royalGoansProject} />
         <ProjectCard project={covidProject} />
         <ProjectCard project={abuHasaniyaProject} />
+        <ProjectCard project={pizzabarProject} />
       </div>
     </Section>
   );
