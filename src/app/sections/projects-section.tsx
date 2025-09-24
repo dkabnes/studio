@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
@@ -164,7 +165,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
                         <h4 className="font-semibold text-lg mb-3 text-foreground">Skills Applied</h4>
                         <div className="flex flex-wrap gap-2">
                         {project.skills.map((skill) => (
-                            <Badge key={skill} variant="outline" className="bg-background">{skill}</Badge>
+                            <Badge key={skill} variant="outline" className="bg-accent/10 text-accent-foreground">{skill}</Badge>
                         ))}
                         </div>
                     </div>
