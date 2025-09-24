@@ -54,7 +54,7 @@ export default function HomeSection() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-primary-foreground/50 text-primary-foreground hover:bg-white/10 hover:text-white">
-                <a href="/Denial_Abnes_CV.pdf" download>
+                <a href="https://www.dropbox.com/scl/fi/ov2u0427dt96amqk95zkt/DA-RESUME-UPDATE-ONLINE.pdf?rlkey=ak873ihkisxviodvhn9b28y3k&st=fso4uh1m&dl=1" target="_blank" rel="noopener noreferrer">
                   Download CV <Download className="ml-2 h-5 w-5" />
                 </a>
               </Button>
