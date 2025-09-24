@@ -1,14 +1,21 @@
 import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { UtensilsCrossed, LineChart, Users, Heart, GraduationCap, Target } from "lucide-react";
+import { Utensils, Shield, Globe, BookOpen, UtensilsCrossed, LineChart, Users, Heart, GraduationCap, Target } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 type Skill = {
   name: string;
   description: string;
   icon: LucideIcon;
   proficiency: number;
+};
+
+type Specialization = {
+  title: string;
+  icon: LucideIcon;
+  skills: string[];
 };
 
 const coreCompetencies: Skill[] = [
@@ -50,11 +57,34 @@ const coreCompetencies: Skill[] = [
   },
 ];
 
+const specializations: Specialization[] = [
+    {
+        title: "Culinary Operations",
+        icon: Utensils,
+        skills: ["Menu Development", "Kitchen Management", "Food Safety", "Vendor Relations"],
+    },
+    {
+        title: "Risk Management",
+        icon: Shield,
+        skills: ["Crisis Leadership", "Compliance", "Safety Protocols", "Insurance Management"],
+    },
+    {
+        title: "International Markets",
+        icon: Globe,
+        skills: ["Cultural Adaptation", "Multi-Currency Operations", "Local Regulations", "Cross-Cultural Teams"],
+    },
+    {
+        title: "Continuous Learning",
+        icon: BookOpen,
+        skills: ["Industry Trends", "Technology Adoption", "Best Practices", "Innovation Implementation"],
+    },
+];
+
 const SectionSubTitle = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center text-center my-12">
-    <div className="flex-grow border-t border-muted-foreground"></div>
+    <div className="flex-grow border-t border-muted-foreground/20"></div>
     <h3 className="mx-4 text-xl font-semibold text-foreground">{children}</h3>
-    <div className="flex-grow border-t border-muted-foreground"></div>
+    <div className="flex-grow border-t border-muted-foreground/20"></div>
   </div>
 );
 
@@ -105,6 +135,30 @@ export default function SkillsSection() {
                 </CardContent>
             </Card>
             ))}
+        </div>
+        <SectionSubTitle>Areas of Specialization</SectionSubTitle>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {specializations.map((spec, index) => (
+            <Card key={index} className="bg-secondary/50 p-6 shadow-sm hover:shadow-lg transition-shadow group">
+                <div className="relative flex flex-col items-center text-center">
+                    <div className="relative mb-4">
+                        <div className="p-5 inline-block bg-background rounded-2xl shadow-inner-lg group-hover:bg-white transition-colors">
+                            <spec.icon className="h-10 w-10 text-primary" />
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-7 h-7 bg-primary/80 text-white backdrop-blur-sm rounded-full flex items-center justify-center text-xs font-bold border-2 border-background">
+                            {spec.skills.length}
+                        </div>
+                    </div>
+                    <h4 className="text-xl font-semibold mb-4 text-foreground">{spec.title}</h4>
+                    <div className="flex flex-wrap justify-center gap-2">
+                        {spec.skills.map(skill => (
+                            <Badge key={skill} variant="outline" className="bg-background group-hover:bg-white transition-colors">{skill}</Badge>
+                        ))}
+                    </div>
+                </div>
+            </Card>
+          ))}
         </div>
     </Section>
   );
