@@ -24,13 +24,13 @@ export default function HomeSection() {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen pt-28 pb-16">
           <div className="space-y-6">
-            <Badge variant="outline" className="gap-2 pl-2 pr-3 py-1 text-sm bg-primary-foreground/10 border-primary-foreground/50 text-yellow-300">
+            <Badge variant="outline" className="gap-2 pl-2 pr-3 py-1 text-sm bg-primary-foreground/10 border-primary-foreground/50 text-accent">
                 <MapPin className="h-4 w-4" />
                 Kuwait • UAE • Canada • India
             </Badge>
             <div className="space-y-4">
               <p className="text-xl md:text-2xl font-medium text-primary-foreground/80">Hello, I'm</p>
-              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-yellow-300">
+              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-accent">
                 Denial Abnes
               </h1>
               <p className="text-2xl md:text-3xl font-medium text-primary-foreground/80">
@@ -79,7 +79,7 @@ export default function HomeSection() {
                 
                 <div className="absolute top-2 -right-2">
                     <div className="p-2 bg-primary/80 backdrop-blur-sm rounded-xl flex items-center gap-2 border border-white/20 shadow-lg">
-                        <p className="text-xl font-bold text-yellow-300">14+</p>
+                        <p className="text-xl font-bold text-accent">14+</p>
                         <p className="text-xs text-primary-foreground/80 leading-tight">Years</p>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ export default function HomeSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-primary-foreground text-center">
                 {stats.map((stat, index) => (
                     <div key={index}>
-                        <p className="text-5xl font-bold text-yellow-300">{stat.value}</p>
+                        <p className="text-5xl font-bold text-accent">{stat.value}</p>
                         <p className="text-lg text-primary-foreground/70">{stat.label}</p>
                     </div>
                 ))}
