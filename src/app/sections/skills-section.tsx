@@ -1,7 +1,7 @@
 import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { UtensilsCrossed, LineChart, Users, Heart, GraduationCap } from "lucide-react";
+import { UtensilsCrossed, LineChart, Users, Heart, GraduationCap, Target } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type Skill = {
@@ -35,6 +35,18 @@ const coreCompetencies: Skill[] = [
     description: "Creating exceptional guest experiences and service recovery strategies.",
     icon: Heart, 
     proficiency: 96 
+  },
+  {
+    name: "Strategic Orientation",
+    description: "Long-term planning, market analysis, and competitive positioning.",
+    icon: Target,
+    proficiency: 88,
+  },
+  {
+    name: "Operations Management",
+    description: "End-to-end operational efficiency and process optimization.",
+    icon: LineChart,
+    proficiency: 94,
   },
 ];
 
