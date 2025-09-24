@@ -65,7 +65,7 @@ export default function HomeSection() {
               <div className="relative w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl"></div>
                 
-                <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-br from-yellow-300 via-accent to-yellow-600 shadow-2xl">
+                <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-br from-accent/70 via-accent to-transparent shadow-2xl">
                     <div className="w-full h-full rounded-full overflow-hidden border-4 border-primary">
                         <Image
                             src={profileImage.imageUrl}
