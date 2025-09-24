@@ -71,8 +71,8 @@ const config = {
           to: { height: "0" },
         },
         "pulse-slow": {
-          "0%, 100%": { opacity: "0.2", transform: "scale(0.95)" },
-          "50%": { opacity: "0.4", transform: "scale(1.1)" },
+          "0%, 100%": { opacity: "0.3", transform: "scale(0.95)" },
+          "50%": { opacity: "0.5", transform: "scale(1.1)" },
         },
       },
       animation: {
