@@ -3,7 +3,7 @@ import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
-import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb, DollarSign, User, CalendarClock, Trophy } from "lucide-react";
+import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb, DollarSign, User, CalendarClock, Trophy, Building, Percent } from "lucide-react";
 
 type Project = {
   title: string;
@@ -91,6 +91,24 @@ const projects: Project[] = [
         { icon: CalendarClock, value: "3", label: "Consecutive Months" },
         { icon: Trophy, value: "Top", label: "Performer" },
     ]
+  },
+  {
+    title: "Strategic Growth at The Sapphire Comfort Hotel",
+    company: "The Sapphire Comfort Hotel",
+    description: "As General Manager, I engineered a multi-faceted strategy to drive revenue and market presence. By forging strategic alliances with key OTAs and TMCs, and launching targeted promotional campaigns, I significantly boosted both room occupancy and F&B sales.",
+    image: PlaceHolderImages.find(p => p.id === 'project-sapphire-hotel'),
+    achievements: [
+      "Forged new strategic partnerships with Online Travel Agencies (OTAs) and Travel Management Companies (TMCs).",
+      "Designed and executed successful promotional campaigns for both rooms and F&B departments.",
+      "Curated and managed high-impact events, significantly increasing footfall and F&B revenue.",
+      "Achieved a substantial increase in overall hotel occupancy and profitability."
+    ],
+    skills: ["Strategic Partnerships", "Revenue Growth", "Event Management", "Promotional Campaigns", "P&L Management"],
+    metrics: [
+      { icon: Building, value: "+20%", label: "Occupancy Increase" },
+      { icon: Percent, value: "+15%", label: "F&B Sales Growth" },
+      { icon: Handshake, value: "10+", label: "New Partnerships" },
+    ]
   }
 ];
 
@@ -157,20 +175,14 @@ const ProjectCard = ({ project }: { project: Project }) => (
 );
 
 export default function ProjectsSection() {
-    const royalGoansProject = projects[0];
-    const covidProject = projects[1];
-    const abuHasaniyaProject = projects[2];
-    const pizzabarProject = projects[3];
-
   return (
     <Section id="projects">
       <SectionTitle>Notable Projects</SectionTitle>
       
       <div className="space-y-12">
-        <ProjectCard project={royalGoansProject} />
-        <ProjectCard project={covidProject} />
-        <ProjectCard project={abuHasaniyaProject} />
-        <ProjectCard project={pizzabarProject} />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </Section>
   );
