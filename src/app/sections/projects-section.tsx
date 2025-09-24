@@ -107,7 +107,7 @@ const projects: Project[] = [
     metrics: [
       { icon: Building, value: "+20%", label: "Occupancy Increase" },
       { icon: Percent, value: "+15%", label: "F&B Sales Growth" },
-      { icon: Handshake, value: "10+", label: "New Partnerships" },
+      { icon: Handshake, value: "30+", label: "New Partnerships" },
     ]
   }
 ];
