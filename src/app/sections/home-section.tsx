@@ -17,7 +17,7 @@ export default function HomeSection() {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
 
   return (
-    <section id="home" className="relative w-full overflow-hidden bg-gradient-to-br from-primary via-primary to-yellow-300/30 text-primary-foreground">
+    <section id="home" className="relative w-full overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/30 text-primary-foreground">
       <div className="absolute top-0 -left-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-lighten filter blur-3xl opacity-50 animate-pulse-slow"></div>
       <div className="absolute bottom-0 -right-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-lighten filter blur-3xl opacity-50 animate-pulse-slow animation-delay-4000"></div>
 
@@ -79,7 +79,7 @@ export default function HomeSection() {
                 
                 <div className="absolute top-2 -right-2">
                     <div className="p-2 bg-primary/80 backdrop-blur-sm rounded-xl flex items-center gap-2 border border-white/20 shadow-lg">
-                        <p className="text-xl font-bold text-white">14+</p>
+                        <p className="text-xl font-bold text-yellow-300">14+</p>
                         <p className="text-xs text-primary-foreground/80 leading-tight">Years</p>
                     </div>
                 </div>
