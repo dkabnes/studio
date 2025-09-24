@@ -102,7 +102,7 @@ const experiences = [
 export default function ExperienceSection() {
   return (
     <Section id="experience" className="bg-secondary">
-      <SectionTitle>Work Experience</SectionTitle>
+      <SectionTitle className="text-foreground">Work Experience</SectionTitle>
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="w-full">
           {experiences.map((exp, index) => (
