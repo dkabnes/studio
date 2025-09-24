@@ -18,13 +18,14 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Loader2, Send } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  name: z.string().min(1, { message: "Name is required." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
+  subject: z.string().min(1, { message: "Subject is required." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
@@ -39,6 +40,7 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
@@ -63,35 +65,53 @@ export function ContactForm() {
   };
 
   return (
-    <Card className="bg-secondary">
-      <CardHeader>
-        <CardTitle>Send a Message</CardTitle>
-        <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
+    <Card className="relative border-t-4 border-purple-400 shadow-lg">
+      <CardHeader className="items-center text-center">
+        <div className="p-4 bg-purple-100 rounded-full mb-2">
+            <Send className="h-8 w-8 text-purple-600 -rotate-45 translate-x-1" />
+        </div>
+        <h3 className="text-2xl font-bold">Send a Message</h3>
+        <p className="text-muted-foreground">I'd love to hear from you. Let's start a conversation.</p>
       </CardHeader>
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="grid sm:grid-cols-2 gap-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name *</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your full name" {...field} disabled={isPending} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email *</FormLabel>
+                    <FormControl>
+                      <Input placeholder="your.email@company.com" {...field} disabled={isPending} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
-              name="name"
+              name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Your Name</FormLabel>
+                  <FormLabel>Subject *</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} disabled={isPending} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Your Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="john.doe@example.com" {...field} disabled={isPending} />
+                    <Input placeholder="What would you like to discuss?" {...field} disabled={isPending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,10 +122,10 @@ export function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>Message *</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Your message here..."
+                      placeholder="Tell me about your project, opportunity, or any questions you have..."
                       className="min-h-[120px]"
                       {...field}
                       disabled={isPending}
