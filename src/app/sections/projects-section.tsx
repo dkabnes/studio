@@ -69,7 +69,7 @@ const projects: Project[] = [
     ],
     skills: ["Operations Optimization", "Menu Engineering", "Marketing Strategy", "Quality Management", "Financial Analysis"],
     metrics: [
-        { icon: TrendingUp, value: "65%", label: "Sales Increase" },
+        { icon: TrendingUp, value: "32%", label: "Sales Increase" },
         { icon: DollarSign, value: "25%", label: "Cost Reduction" },
         { icon: Users, value: "+40%", label: "Staff Efficiency" },
     ]
