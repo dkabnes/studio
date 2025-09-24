@@ -144,8 +144,8 @@ export default function SkillsSection() {
             <Card key={index} className="bg-card p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
                 <div className="relative flex flex-col items-center text-center">
                     <div className="relative mb-6">
-                        <div className="p-5 inline-block bg-secondary rounded-2xl shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)] group-hover:bg-primary/10 transition-colors duration-300">
-                            <spec.icon className="h-10 w-10 text-primary" />
+                        <div className="p-5 inline-block bg-secondary rounded-2xl shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)] group-hover:bg-accent/10 transition-colors duration-300">
+                            <spec.icon className="h-10 w-10 text-accent" />
                         </div>
                         <div className="absolute -top-2 -right-2 w-7 h-7 bg-primary/80 text-white backdrop-blur-sm rounded-full flex items-center justify-center text-xs font-bold border-2 border-background">
                             {spec.skills.length}
