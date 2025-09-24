@@ -3,7 +3,7 @@ import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
-import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb, DollarSign, User } from "lucide-react";
+import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb, DollarSign, User, CalendarClock, Trophy } from "lucide-react";
 
 type Project = {
   title: string;
@@ -79,9 +79,18 @@ const projects: Project[] = [
     company: "Pizzabar, Threesixty Mall",
     description: "Demonstrated exceptional performance by consistently surpassing monthly sales targets for three consecutive months at Pizzabar in Threesixty Mall, significantly contributing to revenue growth.",
     image: PlaceHolderImages.find(p => p.id === 'project-pizzabar'),
-    achievements: [],
-    skills: [],
-    metrics: []
+    achievements: [
+        "Exceeded monthly sales targets by an average of 20% for three consecutive months.",
+        "Implemented upselling strategies that increased average transaction value by 15%.",
+        "Fostered a competitive yet collaborative team environment focused on sales goals.",
+        "Recognized as a top-performing manager within the mall's food and beverage sector."
+    ],
+    skills: ["Sales Leadership", "Team Motivation", "Upselling Techniques", "Performance Tracking", "Customer Engagement"],
+    metrics: [
+        { icon: TrendingUp, value: "+20%", label: "Avg. Target Exceeded" },
+        { icon: CalendarClock, value: "3", label: "Consecutive Months" },
+        { icon: Trophy, value: "Top", label: "Performer" },
+    ]
   }
 ];
 
