@@ -21,7 +21,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Reopening Royal Goans Beach Resort",
+    title: "Reopening Royal Goans Beach Club",
     company: "Royal Goans Group",
     description: "Spearheaded the complete pre-opening phase, from interior design concepts and staffing to purchasing and comprehensive budget forecasting, ensuring a successful and seamless launch.",
     image: PlaceHolderImages.find(p => p.id === 'project-royal-goans'),
