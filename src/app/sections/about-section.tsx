@@ -126,8 +126,8 @@ const AboutSection = () => {
               </Card>
             </div>
 
-            <Card className="bg-philosophy-gradient text-primary-foreground">
-              <CardContent className="p-8">
+            <Card className="bg-primary text-primary-foreground">
+              <CardContent className="p-8 bg-philosophy-gradient">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
                     <Heart className="h-8 w-8 text-white" />
