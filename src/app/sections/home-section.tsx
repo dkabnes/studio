@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -75,7 +76,7 @@ export default function HomeSection() {
                             data-ai-hint={profileImage.imageHint}
                             width={400}
                             height={400}
-                            className="relative object-cover object-[-5px_10px] w-full h-full scale-[1.3]"
+                            className="relative object-cover object-[0px_10px] w-full h-full scale-[1.2]"
                             priority
                         />
                     </div>
