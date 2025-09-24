@@ -21,15 +21,15 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Reopening Royal Goans Beach Club",
+    title: "Reopening Royal Goans Beach Resort",
     company: "Royal Goans Group",
     description: "Spearheaded the complete pre-opening phase, from interior design concepts and staffing to purchasing and comprehensive budget forecasting, ensuring a successful and seamless launch.",
     image: PlaceHolderImages.find(p => p.id === 'project-royal-goans'),
     achievements: [
       "Led the pre-opening and reopening team, overseeing all aspects from interior design to staffing.",
       "Developed comprehensive budget forecasts, ensuring financial viability from day one.",
-      "Established all operational workflows and procurement processes for the new club.",
-      "Successfully launched the club, meeting all pre-set timelines and quality standards."
+      "Established all operational workflows and procurement processes for the new resort.",
+      "Successfully launched the resort, meeting all pre-set timelines and quality standards."
     ],
     skills: ["Project Management", "Budgeting", "Team Leadership", "Procurement", "Operational Planning"],
     metrics: [

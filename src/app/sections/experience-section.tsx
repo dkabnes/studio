@@ -33,12 +33,12 @@ const experiences = [
     },
     {
         role: "Assistant General Manager",
-        company: "Royal Goans Beach Club",
+        company: "Royal Goans Beach Resort",
         location: "India",
         period: "2016",
         details: [
             "Led the pre-opening and reopening team, overseeing interior design, staffing, and procurement.",
-            "Developed budget forecasts and established operational workflows for the newly opened club.",
+            "Developed budget forecasts and established operational workflows for the newly opened resort.",
             "Assisted in all aspects of management to ensure a successful launch.",
         ],
     },
