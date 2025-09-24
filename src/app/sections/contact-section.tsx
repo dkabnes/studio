@@ -26,7 +26,7 @@ const contactDetails = [
 export default function ContactSection() {
   return (
     <Section id="contact">
-      <SectionTitle>Get In Touch</SectionTitle>
+      <SectionTitle className="text-foreground">Get In Touch</SectionTitle>
       <div className="grid md:grid-cols-2 gap-12">
         <div className="space-y-6">
           <p className="text-lg text-muted-foreground">
