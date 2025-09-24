@@ -30,9 +30,11 @@ export default function HomeSection() {
             </Badge>
             <div className="space-y-4">
               <p className="text-xl md:text-2xl font-medium text-primary-foreground/80">Hello, I'm</p>
-              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-accent">
-                Denial Abnes
-              </h1>
+              <div className="inline-block bg-gradient-to-r from-accent/20 via-accent/5 to-transparent p-2 rounded-lg">
+                <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-accent">
+                  Denial Abnes
+                </h1>
+              </div>
               <p className="text-2xl md:text-3xl font-medium text-primary-foreground/80">
                 Hospitality Professional
               </p>
@@ -65,7 +67,7 @@ export default function HomeSection() {
               <div className="relative w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl"></div>
                 
-                <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-br from-accent/70 via-accent to-transparent shadow-2xl">
+                <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-br from-accent/70 via-accent/10 to-transparent shadow-2xl">
                     <div className="w-full h-full rounded-full overflow-hidden border-4 border-primary">
                         <Image
                             src={profileImage.imageUrl}
