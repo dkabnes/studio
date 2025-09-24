@@ -17,7 +17,7 @@ export default function HomeSection() {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
 
   return (
-    <section id="home" className="relative w-full overflow-hidden bg-primary text-primary-foreground">
+    <section id="home" className="relative w-full overflow-hidden bg-gradient-to-br from-primary via-primary to-yellow-300/50 text-primary-foreground">
       <div className="absolute top-0 -left-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-lighten filter blur-3xl opacity-50 animate-pulse-slow"></div>
       <div className="absolute bottom-0 -right-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-lighten filter blur-3xl opacity-50 animate-pulse-slow animation-delay-4000"></div>
 
@@ -30,7 +30,7 @@ export default function HomeSection() {
             </Badge>
             <div className="space-y-4">
               <p className="text-xl md:text-2xl font-medium text-primary-foreground/80">Hello, I'm</p>
-              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-yellow-300">
+              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-white">
                 Denial Abnes
               </h1>
               <p className="text-2xl md:text-3xl font-medium text-primary-foreground/80">
