@@ -76,7 +76,7 @@ export default function HomeSection() {
                             data-ai-hint={profileImage.imageHint}
                             width={400}
                             height={400}
-                            className="relative object-cover object-[10px_10px] w-full h-full scale-[1.3]"
+                            className="relative object-cover object-[25px_10px] w-full h-full scale-[1.3]"
                             priority
                         />
                     </div>
