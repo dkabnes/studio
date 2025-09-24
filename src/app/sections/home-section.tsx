@@ -17,40 +17,40 @@ export default function HomeSection() {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
 
   return (
-    <section id="home" className="relative w-full min-h-screen overflow-hidden bg-background">
+    <section id="home" className="relative w-full overflow-hidden bg-primary text-primary-foreground">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen pt-28 pb-16">
           <div className="space-y-6">
-            <Badge variant="outline" className="gap-2 pl-2 pr-3 py-1 text-sm bg-secondary border-primary/50 text-primary">
+            <Badge variant="outline" className="gap-2 pl-2 pr-3 py-1 text-sm bg-primary-foreground/10 border-primary-foreground/50 text-primary-foreground">
                 <MapPin className="h-4 w-4" />
                 Kuwait • UAE • Canada • India
             </Badge>
             <div className="space-y-4">
-              <p className="text-xl md:text-2xl font-medium text-foreground/80">Hello, I'm</p>
-              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-primary">
+              <p className="text-xl md:text-2xl font-medium text-primary-foreground/80">Hello, I'm</p>
+              <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-white">
                 Denial Abnes
               </h1>
-              <p className="text-2xl md:text-3xl font-medium text-foreground/80">
+              <p className="text-2xl md:text-3xl font-medium text-primary-foreground/80">
                 Hospitality Professional
               </p>
-              <p className="max-w-xl text-foreground/60 md:text-lg">
+              <p className="max-w-xl text-primary-foreground/70 md:text-lg">
                 14+ years of excellence in restaurant and hotel management across international markets. Transforming hospitality experiences through strategic leadership and operational innovation.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-2">
                 {skills.map(skill => (
-                    <Badge key={skill} variant="secondary" className="text-sm">{skill}</Badge>
+                    <Badge key={skill} variant="secondary" className="text-sm bg-white/10 text-white border-none">{skill}</Badge>
                 ))}
             </div>
             
             <div className="flex flex-col gap-3 sm:flex-row pt-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="secondary">
                 <Link href="#contact">
                   Contact Me
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="outline" size="lg" className="border-primary-foreground/50 text-primary-foreground hover:bg-white/10 hover:text-white">
                 <a href="/Denial_Abnes_CV.pdf" download>
                   Download CV <Download className="ml-2 h-5 w-5" />
                 </a>
@@ -60,9 +60,9 @@ export default function HomeSection() {
           <div className="relative flex justify-center items-center">
             {profileImage && (
               <div className="relative w-80 h-80 md:w-96 md:h-96">
-                <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
+                <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl"></div>
                 
-                <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-background shadow-2xl">
+                <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-primary shadow-2xl">
                     <Image
                       src={profileImage.imageUrl}
                       alt={profileImage.description}
@@ -75,21 +75,21 @@ export default function HomeSection() {
                 </div>
                 
                 <div className="absolute top-2 -right-2">
-                    <div className="p-2 bg-background/50 backdrop-blur-sm rounded-xl flex items-center gap-2 border shadow-lg">
-                        <p className="text-xl font-bold text-primary">14+</p>
-                        <p className="text-xs text-foreground/80 leading-tight">Years</p>
+                    <div className="p-2 bg-primary/80 backdrop-blur-sm rounded-xl flex items-center gap-2 border border-white/20 shadow-lg">
+                        <p className="text-xl font-bold text-white">14+</p>
+                        <p className="text-xs text-primary-foreground/80 leading-tight">Years</p>
                     </div>
                 </div>
 
                  <div className="absolute bottom-4 -left-12">
-                    <div className="px-4 py-2 bg-background/50 backdrop-blur-sm rounded-full flex items-center gap-3 border">
+                    <div className="px-4 py-2 bg-primary/80 backdrop-blur-sm rounded-full flex items-center gap-3 border border-white/20">
                         <span className="relative flex h-3 w-3">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                         </span>
                         <div>
-                            <p className="font-semibold text-sm">Available for Projects</p>
-                            <p className="text-xs text-foreground/60">Remote & On-site</p>
+                            <p className="font-semibold text-sm text-white">Available for Projects</p>
+                            <p className="text-xs text-primary-foreground/60">Remote & On-site</p>
                         </div>
                     </div>
                  </div>
@@ -99,11 +99,11 @@ export default function HomeSection() {
         </div>
         
         <div className="pb-24">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-foreground text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-primary-foreground text-center">
                 {stats.map((stat, index) => (
                     <div key={index}>
-                        <p className="text-5xl font-bold text-primary">{stat.value}</p>
-                        <p className="text-lg text-foreground/70">{stat.label}</p>
+                        <p className="text-5xl font-bold text-white">{stat.value}</p>
+                        <p className="text-lg text-primary-foreground/70">{stat.label}</p>
                     </div>
                 ))}
             </div>
