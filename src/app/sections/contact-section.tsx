@@ -6,19 +6,19 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 const contactDetails = [
   {
     icon: Mail,
-    value: "denial.abnes@hospitality.com",
+    value: "dkabnes@gmail.com",
     href: "mailto:dkabnes@gmail.com",
     label: "Email"
   },
   {
     icon: Phone,
-    value: "+965 XX XXX XXXX",
+    value: "+965 65995049",
     href: "tel:+96565995049",
     label: "Phone"
   },
   {
     icon: Linkedin,
-    value: "linkedin.com/in/denialabnes",
+    value: "linkedin.com/in/danielabnes",
     href: "https://www.linkedin.com/in/danielabnes/",
     label: "LinkedIn"
   }
