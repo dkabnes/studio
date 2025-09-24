@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        'philosophy-gradient': 'radial-gradient(ellipse 80% 70% at 50% -10%, hsl(var(--accent) / 0.2), transparent)',
+        'philosophy-gradient': 'radial-gradient(ellipse 80% 50% at 50% 0%, hsl(var(--accent) / 0.15), transparent)',
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
