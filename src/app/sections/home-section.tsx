@@ -24,7 +24,7 @@ export default function HomeSection() {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen pt-28 pb-16">
           <div className="space-y-6">
-            <Badge variant="outline" className="gap-2 pl-2 pr-3 py-1 text-sm bg-primary-foreground/10 border-primary-foreground/50 text-primary-foreground">
+            <Badge variant="outline" className="gap-2 pl-2 pr-3 py-1 text-sm bg-primary-foreground/10 border-primary-foreground/50 text-yellow-300">
                 <MapPin className="h-4 w-4" />
                 Kuwait • UAE • Canada • India
             </Badge>
