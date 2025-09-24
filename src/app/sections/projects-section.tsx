@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Section, SectionTitle } from "@/components/section";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
-import { Award, Target, Users, TrendingUp } from "lucide-react";
+import { Award, Target, Users, TrendingUp, Zap, Handshake, ShieldCheck, Lightbulb } from "lucide-react";
 
 type Project = {
   title: string;
@@ -39,13 +39,22 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "Turnaround during COVID-19",
+    title: "COVID-19 Revenue Recovery Strategy",
     company: "Solo Management Co.",
-    description: "Innovated at Solo Management Co. by introducing car dining services and forging strategic delivery partnerships, successfully reversing a sales decline and driving growth during a challenging period.",
+    description: "Pioneered innovative service delivery methods during the pandemic, maintaining business continuity and customer relationships by introducing car dining and forging strategic delivery partnerships.",
     image: PlaceHolderImages.find(p => p.id === 'project-solo-mgmt'),
-    achievements: [],
-    skills: [],
-    metrics: []
+    achievements: [
+      "Launched car dining services maintaining social distancing.",
+      "Established delivery partnerships with major platforms.",
+      "Implemented contactless payment and ordering systems.",
+      "Maintained 80% of pre-pandemic revenue during peak restrictions."
+    ],
+    skills: ["Crisis Leadership", "Digital Innovation", "Partnership Development", "Service Design", "Revenue Management"],
+    metrics: [
+        { icon: TrendingUp, value: "80%", label: "Revenue Maintained" },
+        { icon: Lightbulb, value: "5", label: "New Services" },
+        { icon: Handshake, value: "8", label: "Partnerships" },
+    ]
   },
   {
     title: "Operational Leadership at Abu Hasaniya",
@@ -67,23 +76,17 @@ const projects: Project[] = [
   }
 ];
 
-export default function ProjectsSection() {
-    const royalGoansProject = projects[0];
-
-  return (
-    <Section id="projects">
-      <SectionTitle>Notable Projects</SectionTitle>
-      
-      <Card className="bg-secondary/50">
+const ProjectCard = ({ project }: { project: Project }) => (
+    <Card className="bg-secondary/50">
         <CardContent className="p-8">
             <div className="grid lg:grid-cols-2 gap-12">
                 <div>
-                    {royalGoansProject.image && (
+                    {project.image && (
                     <div className="relative aspect-video rounded-lg overflow-hidden border-4 border-background shadow-lg mb-8">
                         <Image
-                        src={royalGoansProject.image.imageUrl}
-                        alt={royalGoansProject.image.description}
-                        data-ai-hint={royalGoansProject.image.imageHint}
+                        src={project.image.imageUrl}
+                        alt={project.image.description}
+                        data-ai-hint={project.image.imageHint}
                         fill
                         className="object-cover"
                         />
@@ -91,7 +94,7 @@ export default function ProjectsSection() {
                     )}
                     
                     <div className="grid grid-cols-3 gap-4 text-center">
-                    {royalGoansProject.metrics.map((metric, index) => (
+                    {project.metrics.map((metric, index) => (
                         <div key={index} className="p-4 bg-background rounded-lg shadow-inner-sm">
                             <metric.icon className="h-8 w-8 text-primary mx-auto mb-2" />
                             <p className="text-2xl font-bold text-primary">{metric.value}</p>
@@ -103,16 +106,16 @@ export default function ProjectsSection() {
 
                 <div className="space-y-6">
                     <div>
-                        <h3 className="text-2xl font-bold text-primary">{royalGoansProject.title}</h3>
-                        <p className="text-lg text-muted-foreground">{royalGoansProject.company}</p>
+                        <h3 className="text-2xl font-bold text-primary">{project.title}</h3>
+                        <p className="text-lg text-muted-foreground">{project.company}</p>
                     </div>
                     
-                    <p className="text-foreground/80 leading-relaxed">{royalGoansProject.description}</p>
+                    <p className="text-foreground/80 leading-relaxed">{project.description}</p>
 
                     <div>
                         <h4 className="font-semibold text-lg mb-3 text-foreground">Key Achievements</h4>
                         <ul className="space-y-2">
-                        {royalGoansProject.achievements.map((item, index) => (
+                        {project.achievements.map((item, index) => (
                             <li key={index} className="flex items-start gap-3">
                                 <Award className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                                 <span className="text-muted-foreground">{item}</span>
@@ -124,7 +127,7 @@ export default function ProjectsSection() {
                     <div>
                         <h4 className="font-semibold text-lg mb-3 text-foreground">Skills Applied</h4>
                         <div className="flex flex-wrap gap-2">
-                        {royalGoansProject.skills.map((skill) => (
+                        {project.skills.map((skill) => (
                             <Badge key={skill} variant="outline" className="bg-background">{skill}</Badge>
                         ))}
                         </div>
@@ -132,7 +135,21 @@ export default function ProjectsSection() {
                 </div>
             </div>
         </CardContent>
-      </Card>
+    </Card>
+);
+
+export default function ProjectsSection() {
+    const royalGoansProject = projects[0];
+    const covidProject = projects[1];
+
+  return (
+    <Section id="projects">
+      <SectionTitle>Notable Projects</SectionTitle>
+      
+      <div className="space-y-12">
+        <ProjectCard project={royalGoansProject} />
+        <ProjectCard project={covidProject} />
+      </div>
     </Section>
   );
 }
