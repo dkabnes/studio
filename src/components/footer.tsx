@@ -10,9 +10,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-    { icon: Mail, href: "mailto:denial.abnes@example.com", label: "Email" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/denialabnes", label: "LinkedIn" },
-    { icon: Phone, href: "tel:+15551234567", label: "Phone" },
+    { icon: Mail, href: "mailto:dkabnes@gmail.com", label: "Email" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/danielabnes/", label: "LinkedIn" },
+    { icon: Phone, href: "tel:+96565995049", label: "Phone" },
 ];
 
 const Footer = () => {
@@ -63,8 +63,8 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4 text-foreground">Get in Touch</h4>
             <ul className="space-y-3 text-muted-foreground">
                 <li>Kuwait City, Kuwait</li>
-                <li>denial.abnes@example.com</li>
-                <li>+1 (555) 123-4567</li>
+                <li>dkabnes@gmail.com</li>
+                <li>+965 65995049</li>
             </ul>
           </div>
         </div>

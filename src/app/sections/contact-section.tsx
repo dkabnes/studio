@@ -5,20 +5,20 @@ import { Linkedin, Mail, Phone } from "lucide-react";
 const contactDetails = [
   {
     icon: Mail,
-    value: "denial.abnes@example.com",
-    href: "mailto:denial.abnes@example.com",
+    value: "dkabnes@gmail.com",
+    href: "mailto:dkabnes@gmail.com",
     label: "Email"
   },
   {
     icon: Phone,
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+965 65995049",
+    href: "tel:+96565995049",
     label: "Phone"
   },
   {
     icon: Linkedin,
-    value: "linkedin.com/in/denialabnes",
-    href: "https://www.linkedin.com/in/denialabnes",
+    value: "linkedin.com/in/danielabnes",
+    href: "https://www.linkedin.com/in/danielabnes/",
     label: "LinkedIn"
   }
 ];
