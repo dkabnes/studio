@@ -25,6 +25,11 @@ const projects: Project[] = [
     description: "Took charge of a newly opened restaurant, implementing strategic initiatives that dramatically improved operational efficiency and drove significant sales growth from the ground up.",
     image: PlaceHolderImages.find(p => p.id === 'project-abu-hasaniya'),
   },
+  {
+    title: "Sustained Sales Excellence at Pizzabar",
+    description: "Demonstrated exceptional performance by consistently surpassing monthly sales targets for three consecutive months at Pizzabar in Threesixty Mall, significantly contributing to revenue growth.",
+    image: PlaceHolderImages.find(p => p.id === 'project-pizzabar'),
+  }
 ];
 
 export default function ProjectsSection() {
