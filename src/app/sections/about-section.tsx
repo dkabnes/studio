@@ -21,12 +21,15 @@ const AboutSection = () => {
           <div className="lg:col-span-3 flex flex-col space-y-8">
             <Card className="overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-muted flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <PlayCircle className="h-16 w-16 mx-auto mb-2 text-primary/30" />
-                      <p className="font-medium">Your video will be here</p>
-                      <p className="text-sm">16:9 Aspect Ratio</p>
-                    </div>
+                  <div className="aspect-video">
+                    <iframe 
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/YQzB69n88jQ"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen>
+                    </iframe>
                   </div>
                 </CardContent>
             </Card>
