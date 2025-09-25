@@ -53,7 +53,7 @@ const projects: Project[] = [
     skills: ["Crisis Leadership", "Digital Innovation", "Partnership Development", "Service Design", "Revenue Management"],
     metrics: [
         { icon: TrendingUp, value: "80%", label: "Revenue Maintained" },
-        { icon: Lightbulb, value: "5", label: "New Services" },
+        { icon: Lightbulb, value: "3", label: "New Services" },
         { icon: Handshake, value: "2", label: "Partnerships" },
     ]
   },
