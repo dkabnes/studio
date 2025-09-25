@@ -84,7 +84,7 @@ const AboutSection = () => {
               </CardContent>
             </Card>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
