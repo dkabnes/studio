@@ -21,7 +21,7 @@ const AboutSection = () => {
           <div className="lg:col-span-3 flex flex-col space-y-8">
             <Card className="overflow-hidden flex-grow">
                 <CardContent className="p-0 h-full">
-                  <div className="aspect-video bg-muted flex items-center justify-center h-full">
+                  <div className="aspect-video bg-muted flex items-center justify-center">
                     <div className="text-center text-muted-foreground">
                       <PlayCircle className="h-16 w-16 mx-auto mb-2 text-primary/30" />
                       <p className="font-medium">Your video will be here</p>
