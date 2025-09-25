@@ -1,11 +1,11 @@
 "use client";
 
-import { useTransition } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { submitContactForm } from "@/app/actions";
+import emailjs from "@emailjs/browser";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -32,7 +32,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export function ContactForm() {
-  const [isPending, startTransition] = useTransition();
+  const [isSending, setIsSending] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<FormData>({
@@ -46,22 +46,39 @@ export function ContactForm() {
   });
 
   const onSubmit = (data: FormData) => {
-    startTransition(async () => {
-      const result = await submitContactForm(data);
-      if (result.success) {
+    setIsSending(true);
+
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      subject: data.subject,
+      message: data.message,
+    };
+    
+    emailjs.send(
+      'service_kg29y03', 
+      'template_yq8ggtb', 
+      templateParams, 
+      '_qne4GtLqRoxmHJ4C'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
         toast({
           title: "Message Sent!",
           description: "Thank you for reaching out. I will get back to you shortly.",
         });
         form.reset();
-      } else {
+      }, (err) => {
+        console.log('FAILED...', err);
         toast({
           variant: "destructive",
           title: "Uh oh! Something went wrong.",
           description: "There was a problem with your request. Please try again.",
         });
-      }
-    });
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
@@ -84,7 +101,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your full name" {...field} disabled={isPending} />
+                      <Input placeholder="Your full name" {...field} disabled={isSending} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -97,7 +114,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>Email *</FormLabel>
                     <FormControl>
-                      <Input placeholder="your.email@company.com" {...field} disabled={isPending} />
+                      <Input placeholder="your.email@company.com" {...field} disabled={isSending} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -111,7 +128,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Subject *</FormLabel>
                   <FormControl>
-                    <Input placeholder="What would you like to discuss?" {...field} disabled={isPending} />
+                    <Input placeholder="What would you like to discuss?" {...field} disabled={isSending} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -128,16 +145,16 @@ export function ContactForm() {
                       placeholder="Tell me about your project, opportunity, or any questions you have..."
                       className="min-h-[120px]"
                       {...field}
-                      disabled={isPending}
+                      disabled={isSending}
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={isPending}>
-              {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {isPending ? "Sending..." : "Send Message"}
+            <Button type="submit" className="w-full" disabled={isSending}>
+              {isSending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isSending ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </Form>
