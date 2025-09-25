@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, PlayCircle } from 'lucide-react';
+import { Heart, PlayCircle, Video } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -19,8 +19,8 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-stretch">
           {/* Left Column: Video and Philosophy */}
           <div className="lg:col-span-3 flex flex-col space-y-8">
-            <Card className="overflow-hidden flex-grow">
-                <CardContent className="p-0 h-full">
+            <Card className="overflow-hidden">
+                <CardContent className="p-0">
                   <div className="aspect-video bg-muted flex items-center justify-center">
                     <div className="text-center text-muted-foreground">
                       <PlayCircle className="h-16 w-16 mx-auto mb-2 text-primary/30" />
@@ -30,7 +30,14 @@ const AboutSection = () => {
                   </div>
                 </CardContent>
             </Card>
-            <Card className="bg-primary text-primary-foreground">
+            <div className="flex items-start gap-4 text-foreground">
+              <Video className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
+              <div>
+                <h4 className="font-semibold text-lg">A Glimpse into My Journey</h4>
+                <p className="text-muted-foreground">Watch this short video to learn more about my passion for hospitality and my approach to leadership.</p>
+              </div>
+            </div>
+            <Card className="bg-primary text-primary-foreground mt-auto">
               <CardContent className="p-6 bg-philosophy-gradient flex flex-col justify-center items-center">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-3">
