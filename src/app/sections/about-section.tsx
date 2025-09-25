@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Award, Globe, Users, Heart, PlayCircle } from 'lucide-react';
+import { Heart, PlayCircle } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -50,42 +50,10 @@ const AboutSection = () => {
               </Card>
           </div>
           
-          {/* Education and Philosophy Section */}
+          {/* Philosophy Section */}
           <div className="lg:col-span-2 space-y-8">
-            <h3 className="text-2xl font-semibold text-foreground">
-              Education & Philosophy
-            </h3>
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-xl">
-                    <GraduationCap className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg text-foreground mb-1">MBA in Hotel Management</h4>
-                    <p className="text-accent font-medium text-md mb-1">Himalayan University</p>
-                    <div className="px-3 py-1 bg-accent/10 rounded-full text-xs font-medium text-accent inline-block">2020</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-xl">
-                    <Award className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg text-foreground mb-1">Bachelor's in Business Administration</h4>
-                    <p className="text-accent font-medium text-md mb-1">Madurai Kamaraj University</p>
-                    <div className="px-3 py-1 bg-accent/10 rounded-full text-xs font-medium text-accent inline-block">2008</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="p-6 bg-philosophy-gradient">
+            <Card className="bg-primary text-primary-foreground h-full">
+              <CardContent className="p-6 bg-philosophy-gradient flex flex-col justify-center items-center h-full">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-3">
                     <Heart className="h-6 w-6 text-white" />

@@ -1,7 +1,6 @@
 
-import { Section, SectionTitle } from "@/components/section";
+import { SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Award, Calendar, Building } from "lucide-react";
 
 const certifications = [
@@ -51,10 +50,12 @@ const certifications = [
 
 const CertificationsSection = () => {
   return (
-    <Section id="certifications" className="bg-background">
-      <SectionTitle className="text-foreground">
-        Certifications & Courses
-      </SectionTitle>
+    <>
+      <div className="flex items-center text-center my-12">
+        <div className="flex-grow border-t border-muted-foreground/20"></div>
+        <h3 className="mx-4 text-xl font-semibold text-foreground">Certifications & Courses</h3>
+        <div className="flex-grow border-t border-muted-foreground/20"></div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {certifications.map((cert, index) => (
           <Card key={index} className="flex flex-col border-t-4 border-accent shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -78,7 +79,7 @@ const CertificationsSection = () => {
           </Card>
         ))}
       </div>
-    </Section>
+    </>
   );
 };
 
