@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import HomeSection from "@/app/sections/home-section";
 import AboutSection from "@/app/sections/about-section";
+import CertificationsSection from "@/app/sections/certifications-section";
 import ExperienceSection from "@/app/sections/experience-section";
 import SkillsSection from "@/app/sections/skills-section";
 import ProjectsSection from "@/app/sections/projects-section";
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-1">
         <HomeSection />
         <AboutSection />
+        <CertificationsSection />
         <ExperienceSection />
         <SkillsSection />
         <ProjectsSection />
