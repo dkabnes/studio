@@ -24,7 +24,7 @@ const AboutSection = () => {
                   <div className="aspect-video">
                     <iframe 
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/YQzB69n88jQ"
+                      src="https://www.youtube.com/embed/C3l-NSgSICU"
                       title="YouTube video player"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
