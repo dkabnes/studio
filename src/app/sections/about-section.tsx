@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, PlayCircle } from 'lucide-react';
 
@@ -16,8 +17,8 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-          {/* Video and Journey Section */}
-          <div className="lg:col-span-3 space-y-8">
+          {/* Left Column: Video and Philosophy */}
+          <div className="lg:col-span-2 space-y-8">
             <Card className="overflow-hidden">
                 <CardContent className="p-0">
                   <div className="aspect-video bg-muted flex items-center justify-center">
@@ -29,8 +30,28 @@ const AboutSection = () => {
                   </div>
                 </CardContent>
             </Card>
-            <Card>
-                <CardContent className="p-8">
+            <Card className="bg-primary text-primary-foreground">
+              <CardContent className="p-6 bg-philosophy-gradient flex flex-col justify-center items-center">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-3">
+                    <Heart className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-xl mb-2">My Philosophy</h4>
+                  <div className="w-10 h-0.5 bg-white/50 mx-auto mb-4"></div>
+                  <p className="italic text-md leading-relaxed max-w-md mx-auto">
+                    "Great hospitality is not just about service—it's about creating moments 
+                    that guests remember long after they leave. Success comes from empowering 
+                    teams to exceed expectations every single day."
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          {/* Right Column: My Journey */}
+          <div className="lg:col-span-3">
+            <Card className="h-full">
+                <CardContent className="p-8 h-full">
                   <h3 className="text-2xl font-semibold text-foreground mb-4">
                     My Journey in Hospitality
                   </h3>
@@ -45,28 +66,13 @@ const AboutSection = () => {
                       combines data-driven decision making with a deep understanding of guest psychology and cultural 
                       nuances across different markets.
                     </p>
+                     <p className="leading-relaxed">
+                      From spearheading hotel pre-openings to navigating the challenges of a global pandemic, 
+                      I thrive on transforming complex challenges into success stories. My goal is always to build
+                      resilient operations and mentor teams that deliver exceptional service, no matter the context.
+                    </p>
                   </div>
                 </CardContent>
-              </Card>
-          </div>
-          
-          {/* Philosophy Section */}
-          <div className="lg:col-span-2 space-y-8">
-            <Card className="bg-primary text-primary-foreground h-full">
-              <CardContent className="p-6 bg-philosophy-gradient flex flex-col justify-center items-center h-full">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-3">
-                    <Heart className="h-6 w-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-xl mb-2">My Philosophy</h4>
-                  <div className="w-10 h-0.5 bg-white/50 mx-auto mb-4"></div>
-                  <p className="italic text-md leading-relaxed max-w-md mx-auto">
-                    "Great hospitality is not just about service—it's about creating moments 
-                    that guests remember long after they leave. Success comes from empowering 
-                    teams to exceed expectations every single day."
-                  </p>
-                </div>
-              </CardContent>
             </Card>
           </div>
         </div>
