@@ -16,12 +16,12 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-stretch">
           {/* Left Column: Video and Philosophy */}
-          <div className="lg:col-span-2 space-y-8">
-            <Card className="overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="aspect-video bg-muted flex items-center justify-center">
+          <div className="lg:col-span-3 flex flex-col space-y-8">
+            <Card className="overflow-hidden flex-grow">
+                <CardContent className="p-0 h-full">
+                  <div className="aspect-video bg-muted flex items-center justify-center h-full">
                     <div className="text-center text-muted-foreground">
                       <PlayCircle className="h-16 w-16 mx-auto mb-2 text-primary/30" />
                       <p className="font-medium">Your video will be here</p>
@@ -49,7 +49,7 @@ const AboutSection = () => {
           </div>
           
           {/* Right Column: My Journey */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <Card className="h-full">
                 <CardContent className="p-8 h-full">
                   <h3 className="text-2xl font-semibold text-foreground mb-4">
