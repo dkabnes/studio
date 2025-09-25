@@ -91,7 +91,7 @@ const AboutSection = () => {
                     <div className="p-3 bg-accent/10 rounded-xl">
                       <Globe className="h-6 w-6 text-accent" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <div className="font-semibold text-lg text-foreground">International</div>
                       <div className="text-2xl font-bold text-accent">4 Countries</div>
                     </div>
@@ -104,7 +104,7 @@ const AboutSection = () => {
                     <div className="p-3 bg-accent/10 rounded-xl">
                       <Users className="h-6 w-6 text-accent" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <div className="font-semibold text-lg text-foreground">Leadership</div>
                       <div className="text-2xl font-bold text-accent">200+ Staff</div>
                     </div>
