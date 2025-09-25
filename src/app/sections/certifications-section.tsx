@@ -1,7 +1,8 @@
+
 import { Section, SectionTitle } from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Calendar, Building, Book } from "lucide-react";
+import { Award, Calendar, Building } from "lucide-react";
 
 const certifications = [
   {
@@ -59,7 +60,7 @@ const CertificationsSection = () => {
           <Card key={index} className="flex flex-col border-t-4 border-accent shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-6 flex flex-col flex-grow">
               <div className="mb-4">
-                <CheckCircle2 className="h-10 w-10 text-accent mb-3" />
+                <Award className="h-10 w-10 text-accent mb-3" />
                 <h3 className="text-xl font-bold text-foreground">{cert.title}</h3>
               </div>
               <p className="text-muted-foreground mb-4 flex-grow">{cert.description}</p>
