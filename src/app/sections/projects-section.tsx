@@ -54,7 +54,7 @@ const projects: Project[] = [
     metrics: [
         { icon: TrendingUp, value: "80%", label: "Revenue Maintained" },
         { icon: Lightbulb, value: "5", label: "New Services" },
-        { icon: Handshake, value: "8", label: "Partnerships" },
+        { icon: Handshake, value: "2", label: "Partnerships" },
     ]
   },
   {
